@@ -7,19 +7,20 @@ on: # si on met [push] le workflow se déclenche à chaque push sur n'importe qu
 
 jobs:
     build:
-    runs-on: ubuntu-latest
-    steps:
-      # etape1 : recuperer le code du repo
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      runs-on: ubuntu-latest
 
-        # etape2 : installer les dependances
-      - name: configuration de java 21
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'temurin'
-          java-version: '21'
+      steps:
+        # etape1 : recuperer le code du repo
+        - name: Checkout repository
+          uses: actions/checkout@v3
 
-      - name: compilation du projet
-        run: mvn clean package
-      - run: echo "Compilation terminée avec succès !"
+          # etape2 : installer les dependances
+        - name: configuration de java 21
+          uses: actions/setup-java@v3
+          with:
+            distribution: 'temurin'
+            java-version: '21'
+
+        - name: compilation du projet
+          run: mvn clean package
+        - run: echo "Compilation terminée avec succès !"
