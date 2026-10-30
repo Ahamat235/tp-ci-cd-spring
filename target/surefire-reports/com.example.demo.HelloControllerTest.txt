@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: com.example.demo.HelloControllerTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.874 s <<< FAILURE! -- in com.example.demo.HelloControllerTest
+com.example.demo.HelloControllerTest.whenIndexThenReturnOK -- Time elapsed: 0.164 s <<< FAILURE!
+java.lang.AssertionError: Response content expected:<Bienvenue sur le TP !> but was:<Welcome on the training!>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.ContentResultMatchers.lambda$string$4(ContentResultMatchers.java:148)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.example.demo.HelloControllerTest.whenIndexThenReturnOK(HelloControllerTests.java:30)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
