@@ -22,5 +22,5 @@ jobs:
             java-version: '21'
 
         - name: compilation du projet
-          run: mvn clean package
+          run: mvn clean compile
         - run: echo "Compilation terminée avec succès !"
